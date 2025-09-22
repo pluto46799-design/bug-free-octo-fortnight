@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   XCloud — Coming Soon
+  </title>
+  <meta content="XCloud cloud service — coming soon. Sign up to get notified." name="description"/>
+  <meta content="index,follow" name="robots"/>
+  <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="xCloud — Coming Soon" property="og:title"/>
+  <meta content="xCloud cloud service — coming soon. Sign up to get notified." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="/assets/og-image.png" property="og:image"/>
+  <meta content="/" property="og:url"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link as="image" href="/assets/logo.svg" rel="preload"/>
+  <style>
+   :root{
+  --bg-top:#0a0a0a;
+  --bg-bottom:#b5b5b5;
+  --card-bg:rgba(255,255,255,0.12);
+  --card-brd:rgba(255,255,255,0.25);
+  --text:#fff;
+  --muted:#d0d0d0;
+  --focus:#9ed0ff;
+}
 
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--text);
+  background:linear-gradient(180deg,var(--bg-top),var(--bg-bottom));
+  min-height:100%;
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  display:flex;
+}
+
+.wrap{width:100%;max-width:920px;margin:auto;padding:40px 20px}
+
+.brand{text-align:center;margin-bottom:24px}
+.logo{display:block;margin:0 auto 12px auto}
+.title{font-size:2.25rem;margin:0 0 6px 0;letter-spacing:0.2px}
+.tagline{margin:0;color:var(--muted)}
+
+.glass{
+  backdrop-filter:saturate(150%) blur(16px);
+  -webkit-backdrop-filter:saturate(150%) blur(16px);
+  background:var(--card-bg);
+  border:1px solid var(--card-brd);
+  border-radius:20px;
+  padding:28px;
+  margin:0 auto;
+  box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.glass h2{margin-top:0}
+.narrow{max-width:560px}
+
+.form{display:grid;gap:16px;margin-top:12px}
+.field{display:grid;gap:6px}
+label{color:var(--muted);font-weight:600}
+input,textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  outline:none;
+}
+input::placeholder, textarea::placeholder{color:#ccc}
+input:focus, textarea:focus{border-color:var(--focus); box-shadow:0 0 0 3px rgba(158,208,255,.25)}
+.btn{
+  appearance:none;
+  border:0;
+  border-radius:12px;
+  padding:12px 16px;
+  background:linear-gradient(180deg,#ffffffAA,#ffffff66);
+  color:#0a0a0a;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .05s ease, filter .2s ease;
+}
+.btn:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
+
+.countdown{display:flex;gap:12px;justify-content:center;margin:12px 0 6px}
+.countdown div{
+  display:grid;place-items:center;
+  min-width:78px;padding:10px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.06);
+}
+.countdown span{font-size:1.5rem;font-weight:800}
+.countdown small{color:var(--muted)}
+
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px;flex-wrap:wrap}
+.links a{color:var(--muted);text-decoration:none;margin-right:12px}
+.links a:hover{text-decoration:underline}
+
+.hidden{display:none}
+.micro{color:var(--muted);font-size:.9rem}
+  </style>
+ </head>
+ <body>
+  <main class="wrap">
+   <header class="brand">
+    <img alt="XCloud logo" class="logo" height="72" src="/assets/logo.svg" width="72"/>
+    <h1 class="title">
+     XCloud
+    </h1>
+    <p class="tagline">
+     Private. Fast. Yours.
+    </p>
+   </header>
+   <section class="glass">
+    <h2>
+     We're building something new.
+    </h2>
+    <p>
+     Our cloud is almost ready. Drop your email and we'll let you know when we launch.
+    </p>
+    <div aria-live="polite" class="countdown" hidden="" id="countdown">
+     <div>
+      <span id="dd">
+       00
+      </span>
+      <small>
+       Days
+      </small>
+     </div>
+     <div>
+      <span id="hh">
+       00
+      </span>
+      <small>
+       Hours
+      </small>
+     </div>
+     <div>
+      <span id="mm">
+       00
+      </span>
+      <small>
+       Minutes
+      </small>
+     </div>
+     <div>
+      <span id="ss">
+       00
+      </span>
+      <small>
+       Seconds
+      </small>
+     </div>
+    </div>
+    <form class="form" data-netlify="true" method="POST" name="interest" netlify-honeypot="bot-field">
+     <input name="form-name" type="hidden" value="interest"/>
+     <p class="hidden">
+      <label>
+       Don’t fill this out:
+       <input name="bot-field"/>
+      </label>
+     </p>
+     <div class="field">
+      <label for="name">
+       Name
+      </label>
+      <input autocomplete="name" id="name" name="name" placeholder="Jane Appleseed" type="text"/>
+     </div>
+     <div class="field">
+      <label for="email">
+       Email
+       <span aria-hidden="true">
+        *
+       </span>
+      </label>
+      <input autocomplete="email" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="message">
+       What are you hoping for?
+      </label>
+      <textarea id="message" name="message" placeholder="Tell us what you'd love to see…" rows="4"></textarea>
+     </div>
+     <button class="btn" type="submit">
+      Notify me
+     </button>
+     <p class="micro">
+      This form uses Netlify Forms. We’ll never share your email.
+     </p>
+    </form>
+   </section>
+   <footer class="foot">
+    <p>
+     © 2025 XCloud. All rights reserved.
+    </p>
+    <nav aria-label="Social links" class="links">
+     <!-- Replace # with your links -->
+     <a aria-label="X / Twitter" href="#">
+      Twitter
+     </a>
+     <a aria-label="Instagram" href="#">
+      Instagram
+     </a>
+     <a aria-label="GitHub" href="#">
+      GitHub
+     </a>
+    </nav>
+   </footer>
+  </main>
+  <script>
+   window.LAUNCH_DATE = "2026-02-02T00:00:00";
+  </script>
+  <script>
+   (function(){
+  var target = window.LAUNCH_DATE && new Date(window.LAUNCH_DATE);
+  var el = document.getElementById('countdown');
+  if (!target || isNaN(target)) return; // No countdown if invalid/empty
+  el.hidden = false;
+
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var now = new Date();
+    var d = Math.max(0, target - now);
+    var days = Math.floor(d/86400000);
+    var hours = Math.floor((d%86400000)/3600000);
+    var mins = Math.floor((d%3600000)/60000);
+    var secs = Math.floor((d%60000)/1000);
+    document.getElementById('dd').textContent = pad(days);
+    document.getElementById('hh').textContent = pad(hours);
+    document.getElementById('mm').textContent = pad(mins);
+    document.getElementById('ss').textContent = pad(secs);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+  </script>
+ </body>
+</html>
